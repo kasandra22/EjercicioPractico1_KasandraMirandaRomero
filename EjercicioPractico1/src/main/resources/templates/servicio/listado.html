@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body>
+
+<nav th:replace="~{fragments/navbar :: navbar}"></nav>
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="page-header mb-0">Clases de Entrenamiento</h2>
+        <a th:href="@{/servicio/nuevo}" class="btn btn-primary">+ Nueva Clase</a>
+    </div>
+
+    <div class="card p-0">
+        <table class="table table-dark table-hover mb-0">
+            <thead>
+                <tr style="border-bottom: 2px solid #7A0C0C;">
+                    <th style="color:#ffb3b3;">#</th>
+                    <th style="color:#ffb3b3;">Nombre</th>
+                    <th style="color:#ffb3b3;">Precio</th>
+                    <th style="color:#ffb3b3;">Categoría</th>
+                    <th style="color:#ffb3b3;" class="text-center">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="serv : ${servicios}">
+                    <td th:text="${serv.id}"></td>
+                    <td th:text="${serv.nombre}"></td>
+                    <td th:text="'₡ ' + ${serv.precio}"></td>
+                    <td th:text="${serv.categoria.nombre}"></td>
+                    <td class="text-center">
+                        <a th:href="@{/servicio/editar/{id}(id=${serv.id})}"
+                           class="btn btn-sm btn-outline-warning me-2">Editar</a>
+                        <a th:href="@{/servicio/eliminar/{id}(id=${serv.id})}"
+                           class="btn btn-sm btn-outline-danger"
+                           onclick="return confirm('¿Eliminar esta clase?')">Eliminar</a>
+                    </td>
+                </tr>
+                <tr th:if="${#lists.isEmpty(servicios)}">
+                    <td colspan="5" class="text-center" style="color:#888;">No hay clases registradas.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #5C0A0A !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    padding: 0.75rem 1.5rem;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    color: #f0f0f0 !important;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffb3b3 !important;
+}
+
+.nav-link.active {
+    color: #ffb3b3 !important;
+    font-weight: 700;
+}
+
+/* --- Hero --- */
+.hero {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* --- Cards --- */
+.card {
+    background-color: #1f1f1f;
+    border: 2px solid #7A0C0C;
+    border-radius: 12px;
+    color: #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(92, 10, 10, 0.5);
+}
+
+.card h3 {
+    color: #ffb3b3;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card h4 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* --- Sección de clases (cards pequeñas) --- */
+.clase-card {
+    background-color: #1f1f1f;
+    border: 2px solid #7A0C0C;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.clase-card:hover {
+    background-color: #7A0C0C;
+    transform: translateY(-3px);
+}
+
+/* --- Sección de video --- */
+.video-section {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.video-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffb3b3;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 12px;
+    border: 2px solid #7A0C0C;
+}
+
+/* --- Formulario de contacto --- */
+.form-label {
+    color: #f0f0f0;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    border: 1px solid #7A0C0C;
+    color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background-color: #2a2a2a;
+    border-color: #ffb3b3;
+    color: #f0f0f0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 179, 179, 0.25);
+}
+
+.form-control::placeholder {
+    color: #888888;
+}
+
+/* --- Botones --- */
+.btn-primary {
+    background-color: #7A0C0C;
+    border-color: #7A0C0C;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5C0A0A;
+    border-color: #5C0A0A;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* --- Page header (títulos de sección) --- */
+.page-header {
+    border-bottom: 2px solid #7A0C0C;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #5C0A0A;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 40px 15px 30px;
+    }
+
+    .video-section iframe {
+        height: 250px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}

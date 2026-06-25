@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body>
+
+<nav th:replace="~{fragments/navbar :: navbar}"></nav>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>Bienvenido a Gym Fitness Center</h1>
+        <p>Tu mejor versión comienza aquí. Entrena con los mejores programas y profesionales.</p>
+    </div>
+
+    <div class="card p-4 mb-4">
+        <h3>Clase Destacada</h3>
+        <h4>CrossFit Elite</h4>
+        <p>Programa de entrenamiento funcional de alta intensidad enfocado en mejorar fuerza, resistencia y condición física.</p>
+    </div>
+
+    <div class="row text-center mb-4">
+        <div class="col-md-3 col-6 mb-3">
+            <div class="clase-card">CrossFit</div>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+            <div class="clase-card">HIIT</div>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+            <div class="clase-card">Yoga</div>
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+            <div class="clase-card">Entrenamiento Funcional</div>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <h2>Rutina de Entrenamiento</h2>
+        <iframe src="https://www.youtube.com/embed/ml6cT4AZdqI"
+                title="Rutina de entrenamiento"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+</div>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>
